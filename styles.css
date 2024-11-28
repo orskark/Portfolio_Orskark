@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rethink Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body, html {
+    overflow-x: hidden; /* Para eliminar el scroll horizontal */
+    overflow-y: hidden; /* Controla el scroll vertical */
+    height: 100%;
+}
+
+/* Círculos difuminados en el fondo */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -100;
+}
+
+/* Círculo 1 */
+body::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #593D2B 0%, #593D2B 20%, rgba(89, 61, 43, 0.3) 60%, transparent 70%);
+    top: 1%;
+    left: -4%;
+}
+
+/* Círculo 2 */
+body::after {
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, #593D2B 0%, #593D2B 20%, rgba(89, 61, 43, 0.3) 60%, transparent 70%);
+    top: 60%;
+    left: 70%;
+}
+
+/* Círculos adicionales */
+.circle-3, .circle-4, .circle-5, .circle-6 {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -100;
+}
+
+/* Círculo 3 */
+.circle-3 {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, #56AA1C 0%, #56AA1C 20%, rgba(86, 170, 28, 0.3) 60%, transparent 70%);
+    top: 40%;
+    left: 15%;
+}
+
+/* Círculo 4 */
+.circle-4 {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, #56AA1C 0%, #56AA1C 20%, rgba(86, 170, 28, 0.3) 60%, transparent 70%);
+    top: 5%;
+    left: 70%;
+}
+
+/* Círculo 5 */
+.circle-5 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #F9D616 0%, #F9D616 25%, rgba(249, 214, 22, 0.3) 50%, transparent 75%);
+    top: 50%;
+    left: 45%;
+}
+
+/* Círculo 6 */
+.circle-6 {
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, #F9D616 0%, #F9D616 1%, rgba(249, 214, 22, 0.3) 50%, transparent 75%);
+    top: -20%;
+    left: 25%;
+}
+
+/* Imágenes de fondo */
+body .image-top-left, body .image-bottom-right {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Imagen en la esquina superior izquierda */
+body .image-top-left {
+    width: 300px;
+    height: 300px;
+    background-image: url('orskark_portfolio_assets/paper2.png');
+    top: 0;
+    left: 0;
+}
+
+/* Imagen en la esquina inferior derecha */
+body .image-bottom-right {
+    width: 300px;
+    height: 300px;
+    background-image: url('orskark_portfolio_assets/paper2.png');
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px;
+}
+
+.navbar .nav-link {
+    color: #BC002D;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-link:last-child {
+    margin-right: 0;
+}
+
+.logo {
+    max-height: auto;
+    width: auto;
+}
+
+.navbar .navbar-left,
+.navbar .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Hero Section */
+
+.left-column {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+/* Estilo de la imagen */
+.paper_hero_top1 {
+    position: absolute;
+    top: -11%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -80;
+}
+
+.paper_hero_bottom {
+    position: absolute; /* Relativo al contenedor `.right-column` */
+    bottom: -66%; /* Alineado con el borde inferior */
+    right: 0; /* Alineado con el borde derecho */
+    width: auto; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    z-index: -80; /* Asegúrate de que esté detrás del contenido principal */
+}
+
+.hero-image {
+    position: absolute;
+    bottom: -66%;
+    right: 0%;
+    width: 650px;
+    height: auto;
+    z-index: 1;
+}
+
+/* Columna de la derecha (Texto) */
+.col-md-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Estilo para los encabezados */
+.hero-title, .hero-title1 {
+    font-size: 140px;
+    margin: 0.5rem 0;
+    text-align: left;
+    z-index: 1;
+}
+
+/* Estilo para el texto principal */
+.hero-text {
+    font-size: 60px;
+    margin-top: 0rem;
+    text-align: left;
+    z-index: 1;
+}
+
+/* Cambiar el color de los caracteres específicos */
+.highlight {
+    color: #BC002D;
+}
+
+.stars_hero img {
+    position: absolute; /* Asegura que las estrellas se posicionen de forma absoluta dentro del contenedor */
+    width: 70px; /* Puedes ajustar el tamaño de las estrellas */
+    height: auto;
+    z-index: -70;
+}
+
+.star_hero_bg1 {
+    top: 40%;
+    left: 4%;
+}
+
+.star_hero_bg2 {
+    top: 22%;
+    left: 16%;
+}
+
+.star_hero_bg3 {
+    top: 10%;
+    left: 30%;
+}
+
+.star_hero_bg4 {
+    top: 3%;
+    left: 48%;
+}
+
+.star_hero_bg5 {
+    top: -9%;
+    left: 65%;
+}
+
+
+.stars_hero_right img {
+    position: absolute; /* Posicionamiento absoluto como en el lado izquierdo */
+    width: 70px; /* Mismo tamaño que en el lado izquierdo */
+    height: auto;
+    z-index: -70; /* Mantener el mismo z-index */
+}
+
+/* Posicionamiento de las estrellas individuales en la parte inferior derecha */
+.star_hero_right_1 {
+    bottom: -50%; /* Ajusta la distancia desde el borde inferior */
+    right: 22%; /* Ajusta la distancia desde el borde derecho */
+}
+
+.star_hero_right_2 {
+    bottom: -45%;
+    right: 13%;
+}
+
+.star_hero_right_3 {
+    bottom: -20%;
+    right: 1%;
+}
+
+.star_hero_right_4 {
+    bottom: -60%; /* Nueva estrella más arriba */
+    right: 30%;
+}
+
+.star_hero_right_5 {
+    bottom: -36%; /* Nueva estrella aún más arriba */
+    right: 6%;
+}
+
+
+
+
+/* About Section */
+#about {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+/* Imagen */
+.left-img {
+    position: relative;
+    max-width: 100%;
+    height: 700px;
+    width: 200px;
+    top: 10%;
+    left: 8%;
+    transform: scaleX(-1); /* Efecto espejo */
+    filter: drop-shadow(5px 5px 0px #BC002D); /* Sombra decorativa */
+}
+
+/* Imagen de la derecha */
+.right-img {
+    position: absolute;
+    bottom: -26%;
+    right: 0.5%;
+    width: auto;
+    max-height: 100%;
+}
+
+/* Contenedor de las estrellas dentro de la columna derecha */
+.right-column .stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Estilo general para las estrellas */
+.star {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+/* Posiciones específicas de las estrellas */
+.star-1 {
+    top: 15%;
+    left: 40%;
+}
+
+.star-2 {
+    top: 70%;
+    left: 41%;
+}
+
+.star-3 {
+    top: 40%;
+    left: 48%;
+}
+
+.star-4 {
+    top: 8%;
+    left: 58%;
+}
+
+.star-5 {
+    top: 4%;
+    left: 78%;
+}
+
+.star-6 {
+    top: 34%;
+    left: 86.5%;
+}
+
+/* Contenedor para el texto centrado */
+.right-column .text-center {
+    position: absolute;
+    top: 45%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 4;
+}
+
+/* Estilo del título */
+.right-column .text-center h2 {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #BC002D;
+}
+
+/* Estilo del párrafo */
+.right-column .text-center p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #000;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.right-column .text-center li {
+    padding-top: 50px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #000;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.left-column .paper_about{
+    position: absolute;
+    top: 82%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+.stars-bg-about {
+    position: absolute; /* Asegura que las estrellas se posicionen respecto al contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la columna */
+    height: 100%; /* Ocupa todo el alto de la columna */
+    pointer-events: none; /* Evita que las estrellas interfieran con la interacción del usuario */
+}
+
+.stars-bg-about img {
+    position: absolute; /* Asegura que las estrellas se posicionen de forma absoluta dentro del contenedor */
+    width: 50px; /* Puedes ajustar el tamaño de las estrellas */
+    height: auto;
+}
+
+.star_bg1 {
+    top: 73%;
+    left: 4%;
+}
+
+.star_bg2 {
+    top: 82%;
+    left: 38%;
+}
+
+.star_bg3 {
+    top: 85%;
+    left: 50%;
+}
+
+.star_bg4 {
+    top: 88%;
+    left: 62%;
+}
+
+.star_bg5 {
+    top: 91%;
+    left: 75%;
+}
+
+.star_bg6 {
+    top: 92%;
+    left: 90%;
+}
+
+.star_bg7 {
+    top: 95%;
+    left: 102%;
+}
+
+.star_bg8 {
+    top: 103%;
+    left: 112%;
+}
+
+.star_bg9 {
+    top: 105%;
+    left: 122%;
+}
+
+
