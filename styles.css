@@ -43,6 +43,8 @@ body::after {
     left: 70%;
 }
 
+
+
 /* Círculos adicionales */
 .circle-3, .circle-4, .circle-5, .circle-6 {
     content: '';
@@ -120,25 +122,41 @@ body .image-bottom-right {
     padding: 10px;
 }
 
+/* Estilo general para los enlaces */
 .navbar .nav-link {
-    color: #BC002D;
     font-size: 20px;
     text-decoration: none;
-    padding: 8px;
+    padding: 8px 10px; /* Combina padding horizontal y vertical */
     margin-right: 10px;
     display: flex;
     align-items: center;
+    color: #000; /* Color inicial de los enlaces */
 }
 
+/* Efecto hover */
+.navbar .nav-link:hover {
+    color: #BC002D; /* Cambia color al pasar el mouse */
+}
+
+/* Estilo del enlace activo */
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #BC002D; /* Color del enlace activo */
+    border-bottom: 2px solid #BC002D; /* Línea debajo del enlace activo */
+}
+
+/* Elimina el margen derecho del último enlace */
 .navbar .nav-link:last-child {
     margin-right: 0;
 }
 
+/* Estilo del logo */
 .logo {
     max-height: auto;
     width: auto;
 }
 
+/* Alineación de los items a la izquierda y derecha */
 .navbar .navbar-left,
 .navbar .navbar-right {
     display: flex;
@@ -146,6 +164,17 @@ body .image-bottom-right {
 }
 
 /* Hero Section */
+.hero-link {
+    text-decoration: none; /* Quitar subrayado */
+    color: #000; /* Color inicial del texto */
+    font-weight: bold; /* Texto más marcado */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Animación para hover */
+}
+
+.hero-link:hover {
+    color: #BC002D; /* Color cuando el mouse pasa sobre el texto */
+    border-bottom: 2px solid #BC002D; /* Subrayado similar al navbar */
+}
 
 .left-column {
     display: flex;
@@ -497,7 +526,7 @@ body, html {
     height: auto;
     object-fit: cover; /* Mantiene la imagen sin distorsionar */
     position: absolute;
-    bottom: -160%; /* Se coloca al fondo */
+    bottom: -175%; /* Se coloca al fondo */
     left: 7%;
     z-index: 1;
 }
@@ -532,24 +561,24 @@ body, html {
 
 /* Posición individual de cada elipse */
 .Ellipse_pro_proff1 {
-    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
-    top: 300px; /* Ajusta la posición vertical */
-    left: 5%; /* Ajusta la posición horizontal */
-    width: 450px; /* Tamaño del elipse */
-    height: 450px; /* Tamaño del elipse */
+    position: absolute;
+    top: 300px;
+    left: 5%;
+    width: 450px;
+    height: 450px;
 }
 
 .Ellipse_pro_proff2 {
     position: absolute;
-    top: 300px; 
-    left: 62%; 
+    top: 300px;
+    left: 62%;
     width: 450px;
     height: 450px;
 }
 
 .Ellipse_pro_proff3 {
     position: absolute;
-    top: 50px; 
+    top: 50px;
     left: 5%;
     width: 450px;
     height: 450px;
@@ -557,13 +586,644 @@ body, html {
 
 .Ellipse_pro_proff4 {
     position: absolute;
-    top: 50px; 
+    top: 50px;
     left: 62%;
     width: 450px;
     height: 450px;
 }
 
+/* Texto sobre las elipses */
+.text_over_ellipse1, .text_over_ellipse2, .text_over_ellipse3, .text_over_ellipse4 {
+    position: absolute;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    z-index: 3;
+    text-align: center;
+    transform: translate(-50%, -50%); /* Centra el texto */
+}
+
+.text_over_ellipse1 {
+    top: 245px; /* Ajuste de posición vertical */
+    left: 15%; /* Ajuste de posición horizontal */
+}
+
+.text_over_ellipse2 {
+    top: 245px; /* Ajuste de posición vertical */
+    left: 70.5%; /* Ajuste de posición horizontal */
+}
+
+.text_over_ellipse3 {
+    top: 507px; /* Ajuste de posición vertical */
+    left: 13%; /* Ajuste de posición horizontal */
+}
+
+.text_over_ellipse4 {
+    top: 500px; /* Ajuste de posición vertical */
+    left: 69%; /* Ajuste de posición horizontal */
+}
+
+/* Texto sobre la estrella */
+.text_over_star {
+    position: absolute;
+    font-weight: 600;
+    top: 55%; /* Ajusta según la posición de la estrella */
+    right: 7%; /* Ajusta según la posición de la estrella */
+    transform: translate(-50%, -50%);
+    font-size: 16px; /* Tamaño del texto */
+    color: #000;
+    z-index: 3; /* Cambia si es necesario */
+    text-align: center;
+}
+
+.paper_pro_prof_top1 {
+    position: absolute;
+    top: -11%;
+    left: 0;
+    width: 40%;
+    height: auto;
+    z-index: -80;
+}
+
+/* Contenedor para las estrellas */
+.stars_above_image {
+    position: absolute;
+    top: 50%; /* Ajusta la posición superior según sea necesario */
+    left: 50%; /* Ajusta la posición izquierda según sea necesario */
+    transform: translate(-50%, -50%); /* Centra el contenedor de estrellas */
+    z-index: 0; /* Asegúrate de que estén sobre la imagen */
+}
+.stars_above_image img {
+    position: absolute;
+    width: 40px; /* Ajusta el tamaño de las estrellas */
+    height: auto;
+    z-index: 0;
+}
+
+.star_above_1 {
+    top: 720px; /* Ajusta la posición según el diseño */
+    left: -1250px;
+}
+
+.star_above_2 {
+    top: 710px;
+    left: -1200px;
+}
+
+.star_above_3 {
+    top: 695px;
+    left: -1150px;
+}
+
+.star_above_4 {
+    top: 685px;
+    left: -1098px;
+}
+
+.star_above_5 {
+    top: 710px;
+    left: -1050px;
+}
+.star_above_6 {
+    top: 685px; /* Ajusta la posición según el diseño */
+    left: -1000px;
+}
+
+.star_above_7 {
+    top: 670px;
+    left: -950px;
+}
+
+.star_above_8 {
+    top: 650px;
+    left: -900px;
+}
+
+.star_above_9 {
+    top: 640px;
+    left: -850px;
+}
+
+.star_above_10 {
+    top: 630px;
+    left: -800px;
+}
+.star_above_11 {
+    top: 640px;
+    left: -740px;
+}
+.star_above_12 {
+    top: 660px;
+    left: -690px;
+}
+.star_above_13 {
+    top: 640px;
+    left: -640px;
+}
+.star_above_14 {
+    top: 610px;
+    left: -590px;
+}
+.star_above_15 {
+    top: 590px;
+    left: -540px;
+}
+.star_above_16 {
+    top: 570px;
+    left: -490px;
+}
+.star_above_17 {
+    top: 550px;
+    left: -440px;
+}
+.star_above_18 {
+    top: 540px;
+    left: -385px;
+}
+.star_above_19 {
+    top: 535px;
+    left: -330px;
+}
+.star_above_20 {
+    top: 530px;
+    left: -275px;
+}
+.star_above_21 {
+    top: 525px;
+    left: -220px;
+}
+.star_above_22 {
+    top: 500px;
+    left: -170px;
+}
+.star_above_23 {
+    top: 470px;
+    left: -120px;
+}
+.star_above_24 {
+    top: 440px;
+    left: -70px;
+}
+.star_above_25 {
+    top: 410px;
+    left: 130px;
+}
+.star_above_26 {
+    top: 395px;
+    left: 180px;
+}
+.star_above_27 {
+    top: 390px;
+    left: 230px;
+}
+
+.star_above_28 {
+    top: 390px;
+    left: 280px;
+}
+
+.star_above_29 {
+    top: 420px;
+    left: 80px;
+}
+.star_above_30 {
+    top: 435px;
+    left: 30px;
+}
+.star_above_31 {
+    top: 435px;
+    left: -20px;
+}
 
 
+/* Skills Section */
+
+.skills_title{
+    position: absolute;
+    font-size: 100px;
+    text-align: center;
+    z-index: 2;
+    left: 65%;
+    top: 0%;
+}
 
 
+.paper_skills_top1{
+    position: absolute;
+    top: -11%;
+    left: 0;
+    width: 40%;
+    height: auto;
+    z-index: -80;
+}
+
+.circles_skills{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: -5;
+}
+
+.Ellipse_Skills1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 50px; /* Ajusta la posición vertical */
+    left: 3%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 50px; /* Ajusta la posición vertical */
+    left: 30%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills3{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 50px; /* Ajusta la posición vertical */
+    left: 60%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills4{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 300px; /* Ajusta la posición vertical */
+    left: 3%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills5{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 300px; /* Ajusta la posición vertical */
+    left: 30%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills6{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 300px; /* Ajusta la posición vertical */
+    left: 60%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills7{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 50px; /* Ajusta la posición vertical */
+    left: 90%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+.Ellipse_Skills8{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 50px; /* Ajusta la posición vertical */
+    left: 120%; /* Ajusta la posición horizontal */
+    width: 450px; /* Tamaño del elipse */
+    height: 450px; /* Tamaño del elipse */
+}
+
+.logos_skills{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: 0;
+}
+
+.logo_skills1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 220px; /* Ajusta la posición vertical */
+    left: 17%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 220px; /* Ajusta la posición vertical */
+    left: 43.5%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills3{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 220px; /* Ajusta la posición vertical */
+    left: 73%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills4{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 220px; /* Ajusta la posición vertical */
+    left: 103%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills5{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 220px; /* Ajusta la posición vertical */
+    left: 133%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills6{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 480px; /* Ajusta la posición vertical */
+    left: 17%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills7{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 480px; /* Ajusta la posición vertical */
+    left: 43.5%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.logo_skills8{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 480px; /* Ajusta la posición vertical */
+    left: 73%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.skills_textbox{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: 40;
+}
+.skills_textbox1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 340px; /* Ajusta la posición vertical */
+    left: -27%; /* Ajusta la posición horizontal */
+    width: 750px; /* Tamaño del elipse */
+    height: 430px; /* Tamaño del elipse */
+}
+.text_over_textbox{
+    position: absolute;
+    font-weight: 1000;
+    top: 550px; /* Ajusta según la posición de la estrella */
+    right: -9%; /* Ajusta según la posición de la estrella */
+    transform: translate(-50%, -50%);
+    font-size: 20px; /* Tamaño del texto */
+    color: #000;
+    z-index: 42; /* Cambia si es necesario */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(246, 230, 10, 0.8);
+}
+
+/* PROJECTS SECTION */
+
+.projects_title{
+    position: absolute;
+    font-size: 100px;
+    text-align: center;
+    z-index: 2;
+    left: 60%;
+    top: 0%;
+}
+
+.ellipse_projects{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: -5;
+}
+
+.ellipse_projects1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 10px; /* Ajusta la posición vertical */
+    left: 30%; /* Ajusta la posición horizontal */
+    width: 650px; /* Tamaño del elipse */
+    height: 650px; /* Tamaño del elipse */
+}
+
+.ellipse_projects2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 10px; /* Ajusta la posición vertical */
+    left: 70%; /* Ajusta la posición horizontal */
+    width: 650px; /* Tamaño del elipse */
+    height: 650px; /* Tamaño del elipse */
+}
+.projects_logos{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: 0;
+}
+.projects_logos1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 250px; /* Ajusta la posición vertical */
+    left: 49%; /* Ajusta la posición horizontal */
+    width: 150px; /* Tamaño del elipse */
+    height: 150px; /* Tamaño del elipse */
+}
+.projects_logos2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 250px; /* Ajusta la posición vertical */
+    left: 88%; /* Ajusta la posición horizontal */
+    width: 150px; /* Tamaño del elipse */
+    height: 150px; /* Tamaño del elipse */
+}
+.projects_textbox{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: 1;
+}
+.projects_textbox1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 400px; /* Ajusta la posición vertical */
+    left: 47%; /* Ajusta la posición horizontal */
+    width: 200px; /* Tamaño del elipse */
+    height: 100px; /* Tamaño del elipse */
+}
+
+.projects_textbox2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 400px; /* Ajusta la posición vertical */
+    left: 86%; /* Ajusta la posición horizontal */
+    width: 200px; /* Tamaño del elipse */
+    height: 100px; /* Tamaño del elipse */
+}
+.text_over_textbox_projects1{
+    position: absolute;
+    font-weight: 1000;
+    top: 450px; /* Ajusta según la posición de la estrella */
+    right: -1.5%; /* Ajusta según la posición de la estrella */
+    transform: translate(-50%, -50%);
+    font-size: 13px; /* Tamaño del texto */
+    color: #000;
+    z-index: 42; /* Cambia si es necesario */
+    text-align: center;
+    text-shadow: 2px 2px 4px #BC002D;
+}
+.text_over_textbox_projects2{
+    position: absolute;
+    font-weight: 1000;
+    top: 450px; /* Ajusta según la posición de la estrella */
+    right: 35%; /* Ajusta según la posición de la estrella */
+    transform: translate(-50%, -50%);
+    font-size: 13px; /* Tamaño del texto */
+    color: #000;
+    z-index: 42; /* Cambia si es necesario */
+    text-align: center;
+    text-shadow: 2px 2px 4px #BC002D;
+}
+
+/* CONTACT SECTION */
+.contact_title{
+    position: absolute;
+    font-size: 200px;
+    text-align: center;
+    z-index: 2;
+    left: 85%;
+    top: 0%;
+    text-shadow: 2px 2px 4px rgba(246, 230, 10, 0.8);
+}
+.paper_contact_top1{
+    position: absolute;
+    top: -11%;
+    left: 0;
+    width: 40%;
+    height: auto;
+    z-index: -80;
+}
+.ellipse_contact{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: -5;
+}
+.ellipse_contact1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: -5px; /* Ajusta la posición vertical */
+    left: 0%; /* Ajusta la posición horizontal */
+    width: 500px; /* Tamaño del elipse */
+    height: 500px; /* Tamaño del elipse */
+}
+.ellipse_contact2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: -5px; /* Ajusta la posición vertical */
+    left: 25%; /* Ajusta la posición horizontal */
+    width: 500px; /* Tamaño del elipse */
+    height: 500px; /* Tamaño del elipse */
+}
+.ellipse_contact3{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: -5px; /* Ajusta la posición vertical */
+    left: 50%; /* Ajusta la posición horizontal */
+    width: 500px; /* Tamaño del elipse */
+    height: 500px; /* Tamaño del elipse */
+}
+.ellipse_contact4{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 280px; /* Ajusta la posición vertical */
+    left: 0%; /* Ajusta la posición horizontal */
+    width: 500px; /* Tamaño del elipse */
+    height: 500px; /* Tamaño del elipse */
+}
+.ellipse_contact5{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 280px; /* Ajusta la posición vertical */
+    left: 25%; /* Ajusta la posición horizontal */
+    width: 500px; /* Tamaño del elipse */
+    height: 500px; /* Tamaño del elipse */
+}
+.ellipse_contact6{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 280px; /* Ajusta la posición vertical */
+    left: 50%; /* Ajusta la posición horizontal */
+    width: 500px; /* Tamaño del elipse */
+    height: 500px; /* Tamaño del elipse */
+}
+.contact_logos{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: 1000;
+}
+.contact_logos1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 170px; /* Ajusta la posición vertical */
+    left: 16%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.contact_logos2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 170px; /* Ajusta la posición vertical */
+    left: 41%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.contact_logos3{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 170px; /* Ajusta la posición vertical */
+    left: 66%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.contact_logos4{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 490px; /* Ajusta la posición vertical */
+    left: 16%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.contact_logos5{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 490px; /* Ajusta la posición vertical */
+    left: 41%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.contact_logos6{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 490px; /* Ajusta la posición vertical */
+    left: 66%; /* Ajusta la posición horizontal */
+    width: 90px; /* Tamaño del elipse */
+    height: 90px; /* Tamaño del elipse */
+}
+.stars_contact{
+    position: absolute;
+    width: 100%; /* Tamaño del contenedor general */
+    height: 100%;
+    z-index: -3;
+}
+.star_contact1{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 85px; /* Ajusta la posición vertical */
+    left: 10%; /* Ajusta la posición horizontal */
+    width: 250px; /* Tamaño del elipse */
+    height: 250px; /* Tamaño del elipse */
+}
+.star_contact2{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 85px; /* Ajusta la posición vertical */
+    left: 35%; /* Ajusta la posición horizontal */
+    width: 250px; /* Tamaño del elipse */
+    height: 250px; /* Tamaño del elipse */
+}.star_contact3{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 85px; /* Ajusta la posición vertical */
+    left: 60%; /* Ajusta la posición horizontal */
+    width: 250px; /* Tamaño del elipse */
+    height: 250px; /* Tamaño del elipse */
+}.star_contact4{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 400px; /* Ajusta la posición vertical */
+    left: 10%; /* Ajusta la posición horizontal */
+    width: 250px; /* Tamaño del elipse */
+    height: 250px; /* Tamaño del elipse */
+}.star_contact5{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 400px; /* Ajusta la posición vertical */
+    left: 35%; /* Ajusta la posición horizontal */
+    width: 250px; /* Tamaño del elipse */
+    height: 250px; /* Tamaño del elipse */
+}.star_contact6{
+    position: absolute; /* Necesario para poder moverlo dentro del contenedor */
+    top: 400px; /* Ajusta la posición vertical */
+    left: 60%; /* Ajusta la posición horizontal */
+    width: 250px; /* Tamaño del elipse */
+    height: 250px; /* Tamaño del elipse */
+}

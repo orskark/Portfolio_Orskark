@@ -15,6 +15,8 @@
 
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="styles.css">
+     <!-- AOS CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 </head>
 <body>
@@ -31,26 +33,25 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <div class="row w-100">
-                <!-- Primera columna: items iniciales -->
+                <!-- Primera columna: enlaces iniciales -->
                 <div class="col-md d-flex justify-content-start">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">About Me</a>
-                    <a class="nav-link" href="#">Professional Profile</a>
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="about.html">About Me</a>
+                    <a class="nav-link" href="professional_profile.html">Professional Profile</a>
                 </div>
-
+    
                 <!-- Columna central: logo -->
                 <div class="col-auto d-flex justify-content-center">
                     <a href="index.html">
                         <img src="orskark_portfolio_assets/logo_portfolio_black.png" alt="logo_portfolio_black" class="logo">
                     </a>
                 </div>
-                
-
-                <!-- Última columna: items restantes -->
+    
+                <!-- Última columna: enlaces restantes -->
                 <div class="col-md d-flex justify-content-end">
-                    <a class="nav-link" href="#">Skills</a>
-                    <a class="nav-link" href="#">Portfolio</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="skills.html">Skills</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </div>
             </div>
         </div>
@@ -58,10 +59,14 @@
     <section id="about">
         <div class="row">
             <div class="col-md-4 left-column position-relative">
-                <img src="orskark_portfolio_assets/about_pic1.png" alt="about pic 1" class="left-img mirror-effect">
+                <!-- Imagen con animación fade-up -->
+                <img src="orskark_portfolio_assets/about_pic1.png" alt="about pic 1" class="left-img mirror-effect" data-aos="fade-up">
+                
                 <div class="paper_about">
                     <img src="orskark_portfolio_assets/paper_about.png" alt="paper">
                 </div>
+    
+                <!-- Elementos stars-bg-about no reciben animación -->
                 <div class="stars-bg-about">
                     <img src="orskark_portfolio_assets/star.png" alt="star_bg1" class="star_bg1">
                     <img src="orskark_portfolio_assets/star.png" alt="star_bg2" class="star_bg2">
@@ -72,33 +77,35 @@
                     <img src="orskark_portfolio_assets/star.png" alt="star_bg7" class="star_bg7">
                     <img src="orskark_portfolio_assets/star.png" alt="star_bg8" class="star_bg8">
                     <img src="orskark_portfolio_assets/star.png" alt="star_bg9" class="star_bg9">
-                   
                 </div>
             </div>
+    
             <div class="col-md-8 right-column position-relative">
-                <img src="orskark_portfolio_assets/about_pic2.png" alt="about pic 2" class="right-img">
+                <!-- Imagen con animación fade-up -->
+                <img src="orskark_portfolio_assets/about_pic2.png" alt="about pic 2" class="right-img" data-aos="fade-up">
+                
                 <div class="stars-container">
-                    <img src="orskark_portfolio_assets/goatStar.png" alt="messi star" class="star star-1">
-                    <img src="orskark_portfolio_assets/deniroStar.png" alt="deniro star" class="star star-2">
-                    <img src="orskark_portfolio_assets/doomStar.png" alt="doom star" class="star star-3">
-                    <img src="orskark_portfolio_assets/yeStar.png" alt="ye Star" class="star star-4">
-                    <img src="orskark_portfolio_assets/pacoStar.png" alt="paco Star" class="star star-5">
-                    <img src="orskark_portfolio_assets/pharrellStar.png" alt="pharrell Star" class="star star-6">
+                    <img src="orskark_portfolio_assets/goatStar.png" alt="messi star" class="star star-1" data-aos="fade-up" data-aos-delay="100">
+                    <img src="orskark_portfolio_assets/deniroStar.png" alt="deniro star" class="star star-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="orskark_portfolio_assets/doomStar.png" alt="doom star" class="star star-3" data-aos="fade-up" data-aos-delay="300">
+                    <img src="orskark_portfolio_assets/yeStar.png" alt="ye Star" class="star star-4" data-aos="fade-up" data-aos-delay="400">
+                    <img src="orskark_portfolio_assets/pacoStar.png" alt="paco Star" class="star star-5" data-aos="fade-up" data-aos-delay="500">
+                    <img src="orskark_portfolio_assets/pharrellStar.png" alt="pharrell Star" class="star star-6" data-aos="fade-up" data-aos-delay="600">
                 </div>
+                
+                <!-- Texto con animación fade-up y retraso -->
                 <div class="text-center">
-                    <h2>About Me</h2>
-                    <p>My name is <strong>Óscar Castro</strong>, i was born in Bogotá, Colombia in 2004 
+                    <h2 data-aos="fade-up" data-aos-delay="500">About Me</h2>
+                    <p data-aos="fade-up" data-aos-delay="600">My name is <strong>Óscar Castro</strong>, i was born in Bogotá, Colombia in 2004 
                         (20 years old), i’m a <strong>software analyst and developer</strong>, passionate about music, fashion, visual arts, sports and technology.</p>
                     
-                    <li><strong>Languages: Spanish (Native) - English (Advanced B2 Level).</strong></li>
-                    <li><strong>Currently studying Software Analysis and Development in the National Learning Service (SENA).</strong></li>
+                    <li data-aos="fade-up" data-aos-delay="700"><strong>Languages: Spanish (Native) - English (Advanced B2 Level).</strong></li>
+                    <li data-aos="fade-up" data-aos-delay="800"><strong>Currently studying Software Analysis and Development in the National Learning Service (SENA).</strong></li>
                 </div>
             </div>
         </div>
-
-       
-    
     </section>
+    
     
     
     
@@ -124,5 +131,15 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+     <!-- AOS JS -->
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+     <!-- Inicializar AOS -->
+     <script>
+         AOS.init({
+             duration: 1200, // Duración de la animación
+             easing: 'ease-in-out', // Efecto de easing
+         });
+     </script>
 </body>
 </html>

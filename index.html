@@ -11,6 +11,9 @@
     
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     
@@ -24,25 +27,25 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <div class="row w-100">
-                <!-- Primera columna: items iniciales -->
+                <!-- Primera columna: enlaces iniciales -->
                 <div class="col-md d-flex justify-content-start">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">About Me</a>
-                    <a class="nav-link" href="#">Professional Profile</a>
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About Me</a>
+                    <a class="nav-link" href="professional_profile.html">Professional Profile</a>
                 </div>
-
+    
                 <!-- Columna central: logo -->
                 <div class="col-auto d-flex justify-content-center">
                     <a href="index.html">
                         <img src="orskark_portfolio_assets/logo_portfolio_black.png" alt="logo_portfolio_black" class="logo">
                     </a>
                 </div>
-
-                <!-- Última columna: items restantes -->
+    
+                <!-- Última columna: enlaces restantes -->
                 <div class="col-md d-flex justify-content-end">
-                    <a class="nav-link" href="#">Skills</a>
-                    <a class="nav-link" href="#">Portfolio</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="skills.html">Skills</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </div>
             </div>
         </div>
@@ -54,7 +57,7 @@
             <div class="row">
                 <!-- Columna Izquierda (Imagen) -->
                 <div class="col-md-4 left-column position-relative">
-                    <img src="orskark_portfolio_assets/hero_pic.png" class="img-fluid hero-image" alt="Imagen Hero">
+                    <img src="orskark_portfolio_assets/hero_pic.png" class="img-fluid hero-image" alt="Imagen Hero" data-aos="fade-up">
                     <div class="paper_hero_top">
                         <img src="orskark_portfolio_assets/paper_hero_top.png" alt="paper_hero_top" class="paper_hero_top1">
                     </div>
@@ -66,16 +69,19 @@
                         <img src="orskark_portfolio_assets/star.png" alt="star_hero_bg5" class="star_hero_bg5">           
                     </div>
                 </div>
+
                 <!-- Columna Derecha (Texto) -->
                 <div class="col-md-8 right-column position-relative">
-                    <h2 class="hero-title">
+                    <h2 class="hero-title" data-aos="fade-up" data-aos-delay="500">
                         hey there<span class="highlight">!</span>
                     </h2>
-                    <h3 class="hero-title1">
+                    <h3 class="hero-title1" data-aos="fade-up" data-aos-delay="600">
                         i'm <span class="highlight">Óscar...</span>
                     </h3>
-                    <h1 class="hero-text">Software Analyst and Developer.</h1>
-                
+                    <h1 class="hero-text" data-aos="fade-up" data-aos-delay="700">
+                        <a href="about.html" class="hero-link">Software Analyst and Developer.</a>
+                    </h1>
+
                     <div class="paper_hero_bottom">
                         <img src="orskark_portfolio_assets/paper_hero_bottom.png" alt="paper_hero_bottom1">
                     </div>
@@ -93,5 +99,16 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Inicializar AOS -->
+    <script>
+        AOS.init({
+            duration: 1200, // Duración de la animación
+            easing: 'ease-in-out', // Efecto de easing
+        });
+    </script>
 </body>
 </html>
